@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.util.UriBuilder;
 import reactor.core.publisher.Mono;
 
 @Controller
@@ -22,7 +21,7 @@ public class SwapiController {
         return "index";
     }
 
-    @GetMapping("/planets")
+    @GetMapping("/planet")
     public String planet(Model model, @RequestParam Long id) {
 
         // TODO : call the API and retrieve the planet
